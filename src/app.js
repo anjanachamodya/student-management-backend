@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 //Connect to database
+
 connectDB();
 
 const app = express();
@@ -22,7 +23,3 @@ app.use('/api/students', studentRoutes);
 app.listen(PORT,() => {
     console.log(`Server running on ${PORT}`);
 });
-
-const studentRoutes = require('./routes/studentRoute');
-
-app.use('/api/students', studentRoutes);

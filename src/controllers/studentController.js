@@ -6,7 +6,7 @@ const createStudent = async (req,res) => {
     try{
         //req body contains the student data send by the user
         const student = await Student.create(req.body);
-        req.status(201).json(student);
+        res.status(201).json({message: "Student created successfully"});
     }
     catch(err){
         res.status(400).json({message:"invalid data", error: err.message});
@@ -29,11 +29,12 @@ const getStudents = async (req,res) => {
 //@route GET/api/students/id
 const getStudentById = async (req,res) => {
     try{
-        const students = await Student.findById(req.params.id);
-        if(!Student){
-            return res.status(404).json({message: "Student not found"});
+        const student = await Student.findById(req.params.id);
+        if(!student){
+            res.status(404).json({message: "Student not found"});
+        }else{
+        res.status(200).json(student);
         }
-        res.status(200).json(Student);
     }
     catch(err){
         res.status(400).json({message:"Invalid ID format"});
@@ -48,7 +49,7 @@ const updateStudent = async (req,res) => {
         if(!Student){
             return res.status(404).json({message: "Student not found"});
         }
-        res.status(200).json(student);
+        res.status(200).json({message:"Student updated successfully",student});
     }
     catch(err){
         res.status(400).json({message:err.message});
