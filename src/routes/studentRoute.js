@@ -13,7 +13,7 @@ router.route('/')
     .get(getStudents)
     .post(createStudent);
 
-//routes for api/students/id
+//routes get/api/students/:id
 router.route('/:id')
     .get(getStudentById)
     .put(updateStudent)

@@ -17,8 +17,8 @@ const createStudent = async (req,res) => {
 //@route GET/api/Students
 const getStudents = async (req,res) => {
     try{
-        const students = await Student.find();
-        req.status(201).json(students);
+        const student = await Student.find();
+        res.status(200).json(student);
     }
     catch(err){
         res.status(400).json({message:"invalid data", error: err.message});
@@ -44,11 +44,11 @@ const getStudentById = async (req,res) => {
 //@route PUT/api/students/id
 const updateStudent = async (req,res) => {
     try{
-        const students = await Student.findByIdAndUpdate(req.params.id,req.body,{new:true});
+        const student = await Student.findByIdAndUpdate(req.params.id,req.body,{new:true});
         if(!Student){
             return res.status(404).json({message: "Student not found"});
         }
-        res.status(200).json(Student);
+        res.status(200).json(student);
     }
     catch(err){
         res.status(400).json({message:err.message});
@@ -59,7 +59,7 @@ const updateStudent = async (req,res) => {
 //@route DELETE/api/students/id
 const deleteStudent = async (req,res) => {
     try{
-        const students = await Student.findByIdAndDelete(req.params.id);
+        const student = await Student.findByIdAndDelete(req.params.id);
         if(!Student){
             return res.status(404).json({message: "Student not found"});
         }
