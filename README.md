@@ -42,11 +42,10 @@ src/
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
-```bash
-git clone <your-repo-url>
+git clone [(https://github.com/anjanachamodya/student-management-backend/tree/main)]
 cd student-management-api
 
-#2. Install dependencies
+##2. Install dependencies
 ```bash
 npm install
 
