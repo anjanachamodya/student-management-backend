@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const validateStudent = require('../middleware/studentValidator');
 const{
     getStudents,
     getStudentById,
@@ -11,12 +12,12 @@ const{
 //routes for api/students
 router.route('/')
     .get(getStudents)
-    .post(createStudent);
+    .post(validateStudent,createStudent);
 
 //routes get/api/students/:id
 router.route('/:id')
     .get(getStudentById)
-    .put(updateStudent)
+    .put(validateStudent,updateStudent)
     .delete(deleteStudent);
 
 module.exports = router;

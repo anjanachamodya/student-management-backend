@@ -46,7 +46,7 @@ const getStudentById = async (req,res) => {
 const updateStudent = async (req,res) => {
     try{
         const student = await Student.findByIdAndUpdate(req.params.id,req.body,{new:true});
-        if(!Student){
+        if(!student){
             return res.status(404).json({message: "Student not found"});
         }
         res.status(200).json({message:"Student updated successfully",student});
