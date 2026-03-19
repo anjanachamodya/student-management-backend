@@ -45,10 +45,12 @@ src/
 ```bash
 git clone <your-repo-url>
 cd student-management-api
-2. Install dependencies
-npm install
-3. Create .env file
 
+###2. Install dependencies
+```bash
+npm install
+
+###3. Create .env file
 Create a .env file in the root directory and add:
 
 PORT=5000
