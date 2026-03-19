@@ -46,7 +46,7 @@ src/
 git clone <your-repo-url>
 cd student-management-api
 
-###2. Install dependencies
+#2. Install dependencies
 ```bash
 npm install
 
