@@ -42,26 +42,36 @@ src/
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
+```bash
 git clone [(https://github.com/anjanachamodya/student-management-backend/tree/main)]
 cd student-management-api
+```
 
-##2. Install dependencies
+## 2. Install dependencies
 ```bash
 npm install
+```
 
-###3. Create .env file
+### 3. Create .env file
 Create a .env file in the root directory and add:
 
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
-4. Run the server
+
+### 4. Run the server
+```bash
 npm run dev
+```
 
 or
-
+```bash
 node src/app.js
-🌐 API Endpoints
-📌 Create Student
+```
+
+## 🌐 API Endpoints
+
+### 📌 Create Student
+
 POST /api/students
 
 Body:
@@ -72,11 +82,18 @@ Body:
   "age": 20,
   "course": "Computer Science"
 }
-📌 Get All Students
+
+
+### 📌 Get All Students
+
 GET /api/students
-📌 Get Student by ID
+
+### 📌 Get Student by ID
+
 GET /api/students/:id
-📌 Update Student
+
+### 📌 Update Student
+
 PUT /api/students/:id
 
 Body (example):
