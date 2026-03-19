@@ -26,7 +26,7 @@ The API allows users to perform full **CRUD (Create, Read, Update, Delete)** ope
 ---
 
 ## 📁 Project Structure
-
+```bash
 src/
 ├── controllers # Handle request/response logic
 ├── services # Business logic layer
@@ -35,6 +35,7 @@ src/
 ├── middleware # Custom middleware
 ├── config # Configuration files
 └── app.js # Entry point
+```
 
 
 ---
@@ -102,5 +103,7 @@ Body (example):
   "name": "Updated Name",
   "age": 22
 }
-📌 Delete Student
+
+### 📌 Delete Student
+
 DELETE /api/students/:id
